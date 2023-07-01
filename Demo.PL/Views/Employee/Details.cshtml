@@ -1,0 +1,51 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Employee Details</h1>
+<br />
+<br />
+<div class="row">
+    <div class="col-6">
+        <form asp-action="Edit" asp-controller="Department">
+            <input hidden asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="@Model.Name" class="col-form-label"></label>
+                <input asp-for="@Model.Name" class="form-control" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Salary" class="col-form-label"></label>
+                <input asp-for="@Model.Salary" class="form-control" />
+                <span asp-validation-for="@Model.Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Address" class="col-form-label"></label>
+                <input asp-for="@Model.Address" class="form-control" />
+                <span asp-validation-for="@Model.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Email" class="col-form-label"></label>
+                <input asp-for="@Model.Email" class="form-control" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Image" class="col-form-label"></label>
+                <input type="file" asp-for="@Model.Image" class="form-control" />
+            </div>
+          
+            <div class="form-group">
+                <label asp-for="@Model.HireDate" class="col-form-label"></label>
+                <input asp-for="@Model.HireDate" class="form-control" />
+                <span asp-validation-for="@Model.HireDate" class="text-danger"></span>
+            </div>
+
+            <br />
+            <input type="submit" value="Edit" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-light">Back To list</a>
+        </form>
+    </div>
+</div>
+
+
+

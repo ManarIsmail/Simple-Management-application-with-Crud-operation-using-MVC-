@@ -1,0 +1,35 @@
+﻿@model Department
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Update New Department</h1>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-6">
+        <form asp-action="Edit" asp-controller="Department">
+            <div class="form-group">
+                <label asp-for="@Model.Code" class="col-form-label"></label>
+                <input asp-for="@Model.Code" class="form-control" />
+                <span asp-validation-for="@Model.Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Name" class="col-form-label"></label>
+                <input asp-for="@Model.Name" class="form-control" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+            </div>
+            <br />
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-light">Back To list</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
