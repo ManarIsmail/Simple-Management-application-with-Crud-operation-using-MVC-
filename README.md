@@ -10,7 +10,7 @@
   <li>Sign In , Logout and Sign Up</li>
   <li>Reset password and send emails</li>
   <li>Crud operations and upload images(add, delete, update,search, show details)</li>
-  <li>Upgrade for .Net6</li>
+  <li>Use Code first , Upgrade for .Net6</li>
 </ul>
 
 ***
